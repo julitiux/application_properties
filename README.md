@@ -9,3 +9,9 @@ java -jar application_properties-0.0.1-SNAPSHOT.jar --server.port=9090
 ```shell
 java -jar -Dspring.config.location=~/.local/application.properties application_properties-0.0.1-SNAPSHOT.jar
 ```
+
+# Spring active profile in application.properties
+While running the JAR file, we need to specify the spring active profile based on each properties file. By default, Spring Boot application uses the application.properties file. the command to set the spring active profile is show below
+```shell
+java -jar application_properties-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
+```
