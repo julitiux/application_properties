@@ -15,3 +15,20 @@ While running the JAR file, we need to specify the spring active profile based o
 ```shell
 java -jar application_properties-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
 ```
+
+You can set the enviroment using a global variable. You have to set si property into application.properties
+```shell
+server.port=9090
+spring.application.name=fosfofosfo
+spring.profiles.active=${SPRING_ENV}
+```
+
+In the command line 
+```shell
+export SPRING_ENV=dev
+```
+
+And execute the command
+```shell
+gradle build bootRun
+```
